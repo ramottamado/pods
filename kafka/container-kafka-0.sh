@@ -20,5 +20,6 @@ podman container create \
     -e KAFKA_CFG_NODE_ID=0 \
     -e KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@kafka.nadzieja.test:9093 \
     -e BITNAMI_DEBUG=yes \
+    -m 1g \
     -v /var/opt/containers/kafka:/bitnami/kafka:z \
     docker.io/bitnami/kafka:3.4
