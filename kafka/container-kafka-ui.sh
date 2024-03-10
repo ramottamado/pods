@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p /var/opt/containers/kafka-ui
 touch /var/opt/containers/kafka-ui/config.yml
 chown -R 100:101 /var/opt/containers/kafka-ui
 
