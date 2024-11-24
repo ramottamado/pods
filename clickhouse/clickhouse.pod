@@ -1,0 +1,11 @@
+[Unit]
+Description=ClickHouse Pod
+
+[Service]
+Restart=on-failure
+
+[Pod]
+PodName=clickhouse
+IP=10.88.0.13
+PodmanArgs=--hostname=clickhouse.marceline.test
+PodmanArgs=--memory=4g

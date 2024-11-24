@@ -1,0 +1,10 @@
+[Unit]
+Description=Postgres Pod
+
+[Service]
+Restart=on-failure
+
+[Pod]
+PodName=postgres
+IP=10.88.0.11
+PodmanArgs=--hostname=postgres.marceline.test
