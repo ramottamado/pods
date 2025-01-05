@@ -1,5 +1,5 @@
 [Unit]
-Description=Kafka Cluster Pod
+Description=Kafka Node 0 Pod
 
 [Service]
 Restart=on-failure
@@ -7,5 +7,5 @@ Restart=on-failure
 [Pod]
 PodName=kafka
 IP=10.88.0.10
-PodmanArgs=--hostname=kafka.marceline.test
+PodmanArgs=--hostname=kafka-0.test
 PodmanArgs=--memory=4g
