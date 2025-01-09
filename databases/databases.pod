@@ -1,0 +1,10 @@
+[Unit]
+Description=Databases Pod
+
+[Service]
+Restart=on-failure
+
+[Pod]
+PodName=databases
+IP=10.88.0.100
+AddHost=databases.containers.internal:127.0.0.1
