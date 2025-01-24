@@ -11,6 +11,7 @@ AutoUpdate=registry
 ContainerName=postgres
 CgroupsMode=no-conmon
 ShmSize=256m
-Pod=databases.pod
+HostName=postgres.containers.internal
+IP=10.88.0.100
 Volume=/var/opt/containers/postgres:/var/lib/postgresql/data:z
 PodmanArgs=--memory=1gb

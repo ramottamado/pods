@@ -9,7 +9,8 @@ Image=docker.io/dbeaver/cloudbeaver:latest
 AutoUpdate=registry
 ContainerName=cloudbeaver
 CgroupsMode=no-conmon
-Pod=databases.pod
+HostName=cloudbeaver.containers.internal
+IP=10.88.0.101
 Volume=/var/opt/containers/cloudbeaver/workspace:/opt/cloudbeaver/workspace:z
 Volume=/var/opt/containers/cloudbeaver/custom:/opt/cloudbeaver/conf/custom:z
 Environment=CLOUDBEAVER_WEB_SERVER_PORT=80

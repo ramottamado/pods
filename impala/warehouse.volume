@@ -1,0 +1,5 @@
+[Unit]
+Description=Hive warehouse volume
+
+[Volume]
+VolumeName=warehouse
