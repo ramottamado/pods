@@ -1,0 +1,18 @@
+[Unit]
+Description=HAProxy Server Container
+
+[Service]
+Restart=on-failure
+
+[Container]
+Image=docker.io/haproxytech/haproxy-alpine:3.2
+AutoUpdate=registry
+ContainerName=haproxy
+CgroupsMode=no-conmon
+HostName=haproxy.containers.internal
+IP=10.88.0.101
+Volume=/var/opt/containers/haproxy:/usr/local/etc/haproxy:Z
+PodmanArgs=--memory=1gb
+
+[Install]
+WantedBy=default.target
