@@ -9,10 +9,11 @@ Image=docker.io/haproxytech/haproxy-alpine:3.2
 AutoUpdate=registry
 ContainerName=haproxy
 CgroupsMode=no-conmon
-HostName=haproxy.containers.internal
+HostName=haproxy.saoirse.home.arpa
+DNS=10.88.0.2
 IP=10.88.0.101
 Volume=/var/opt/containers/haproxy:/usr/local/etc/haproxy:Z
-PodmanArgs=--memory=1gb
+Memory=1gb
 
 [Install]
 WantedBy=default.target

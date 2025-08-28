@@ -5,13 +5,14 @@ Description=Postgres Server Container
 Restart=on-failure
 
 [Container]
-Image=docker.io/library/postgres:15
+Image=docker.io/library/postgres:17
 Exec=postgres
 AutoUpdate=registry
 ContainerName=postgres
 CgroupsMode=no-conmon
 ShmSize=256m
-HostName=postgres.containers.internal
+HostName=postgres.saoirse.home.arpa
+DNS=10.88.0.2
 IP=10.88.0.100
 Volume=/var/opt/containers/postgres:/var/lib/postgresql/data:z
-PodmanArgs=--memory=1gb
+Memory=1g
