@@ -9,7 +9,6 @@ SuccessExitStatus=137
 [Container]
 Image=docker.io/apache/kafka:4.0.0
 AutoUpdate=registry
-ContainerName=kafka-0
 CgroupsMode=no-conmon
 HostName=kafka-0.saoirse.home.arpa
 DNS=10.88.0.2

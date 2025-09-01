@@ -1,20 +1,16 @@
 [Unit]
-Description=DNS Proxy Container
+Description=CoreDNS
+After=dnsproxy.container
+Requires=dnsproxy.container
 
 [Service]
 Restart=on-failure
 
 [Container]
+Pod=ns.pod
 Image=docker.io/coredns/coredns:latest
 AutoUpdate=registry
-ContainerName=dns
 CgroupsMode=no-conmon
-DNS=10.88.0.88
-HostName=dns.saoirse.home.arpa
-IP=10.88.0.2
 Volume=/var/opt/containers/coredns/Corefile:/Corefile:z
 Volume=/var/opt/containers/coredns/etc/coredns:/etc/coredns:z
 Memory=1g
-
-[Install]
-WantedBy=default.target

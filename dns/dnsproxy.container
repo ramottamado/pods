@@ -1,0 +1,13 @@
+[Unit]
+Description=AdGuard DNSProxy
+
+[Service]
+Restart=on-failure
+
+[Container]
+Pod=ns.pod
+Image=docker.io/adguard/dnsproxy:latest
+AutoUpdate=registry
+CgroupsMode=no-conmon
+Volume=/var/opt/containers/dnsproxy/config.yaml:/opt/dnsproxy/config.yaml:z
+Memory=1g
