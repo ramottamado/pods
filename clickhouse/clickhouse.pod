@@ -7,5 +7,6 @@ Restart=on-failure
 [Pod]
 PodName=clickhouse
 IP=10.88.0.13
-PodmanArgs=--hostname=clickhouse.test
-PodmanArgs=--memory=4g
+Hostname=clickhouse.saoirse.home.arpa
+ExitPolicy=continue
+Memory=4g

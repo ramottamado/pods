@@ -7,6 +7,7 @@ Restart=on-failure
 [Container]
 Pod=mail.pod
 Image=tamado.codes/library/dovecot:latest
+AutoUpdate=local
 CgroupsMode=no-conmon
 Volume=/var/opt/containers/dovecot/mail.key:/etc/dovecot/mail.key:z
 Volume=/var/opt/containers/dovecot/mail.crt:/etc/dovecot/mail.crt:z
