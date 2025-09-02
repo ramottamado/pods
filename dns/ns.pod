@@ -1,8 +1,12 @@
 [Unit]
 Description=DNS Pod
 
+[Service]
+Restart=on-failure
+
 [Pod]
 PodName=ns
+ExitPolicy=continue
 DNS=127.0.0.1
 IP=10.88.0.2
 HostName=ns.saoirse.home.arpa
