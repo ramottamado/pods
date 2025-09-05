@@ -8,11 +8,11 @@ Restart=on-failure
 
 [Container]
 Pod=mail.pod
-Image=docker.io/roundcube/roundcubemail:1.5.x-apache
+Image=docker.io/roundcube/roundcubemail:1.5.11-apache
 AutoUpdate=registry
 CgroupsMode=no-conmon
 Environment=ROUNDCUBEMAIL_DB_TYPE=sqlite
 Volume=/var/opt/containers/roundcube/db:/var/roundcube/db:z
 Volume=/var/opt/containers/roundcube/config:/var/roundcube/config:z
-Volume=/etc/pki/ca-trust/source/anchors/tamado-ca.crt:/var/roundcube/ca.crt:ro
+Volume=/var/opt/containers/roundcube/ca.crt:/var/roundcube/ca.crt:z
 Memory=1g
