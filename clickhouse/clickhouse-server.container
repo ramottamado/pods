@@ -7,12 +7,13 @@ Restart=on-failure
 [Container]
 Image=docker.io/library/clickhouse:lts
 AutoUpdate=registry
-ContainerName=clickhouse-server
-Pod=clickhouse.pod
-CgroupsMode=no-conmon
+IP=10.88.0.13
+Hostname=clickhouse.saoirse.home.arpa
+CgroupsMode=split
 AddCapability=SYS_NICE NET_ADMIN IPC_LOCK
 Ulimit=nofile=262144:262144
 Volume=/var/opt/containers/clickhouse/data:/var/lib/clickhouse:z
 Volume=/var/opt/containers/clickhouse/logs:/var/log/clickhouse-server:z
 Volume=/var/opt/containers/clickhouse/configs:/etc/clickhouse-server/config.d:z
 Volume=/var/opt/containers/clickhouse/users:/etc/clickhouse-server/users.d:z
+Memory=4g
