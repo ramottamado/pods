@@ -1,0 +1,3 @@
+[Volume]
+Device=/var/opt/containers/kafka-2/sharedconfig
+Options=bind

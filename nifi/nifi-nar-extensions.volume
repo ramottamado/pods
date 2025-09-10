@@ -1,0 +1,3 @@
+[Volume]
+Device=/var/opt/containers/nifi/opt/nifi/nifi-current/nar_extensions
+Options=bind
