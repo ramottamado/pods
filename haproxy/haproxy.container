@@ -7,7 +7,6 @@ Restart=on-failure
 [Container]
 Image=docker.io/haproxytech/haproxy-alpine:3.2
 AutoUpdate=registry
-CgroupsMode=split
 HostName=haproxy.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.101

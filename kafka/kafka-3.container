@@ -1,5 +1,5 @@
 [Unit]
-Description=Kafka Node 0
+Description=Kafka Node 3
 
 [Service]
 Restart=on-failure
@@ -7,25 +7,21 @@ SuccessExitStatus=143
 SuccessExitStatus=137
 
 [Container]
-Image=docker.io/apache/kafka:4.0.0
+Image=docker.io/apache/kafka:latest
 AutoUpdate=registry
-CgroupsMode=split
-HostName=kafka-0.saoirse.home.arpa
+HostName=kafka-3.saoirse.home.arpa
 DNS=10.88.0.2
-IP=10.88.0.10
-AddHost=kafka-0.saoirse.home.arpa:10.88.0.10
-AddHost=kafka-1.saoirse.home.arpa:10.88.0.11
-AddHost=kafka-2.saoirse.home.arpa:10.88.0.12
-Volume=/var/opt/containers/kafka-0:/var/lib/kafka/data:z
+IP=10.88.0.13
+Volume=/var/opt/containers/kafka-3:/var/lib/kafka/data:z
 Environment=CLUSTER_ID=2b3b4d65-12b0-458a-9e9d-e5557751be33
-Environment=KAFKA_NODE_ID=0
+Environment=KAFKA_NODE_ID=3
 Environment=KAFKA_PROCESS_ROLES=broker,controller
 Environment=KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT
 Environment=KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
 Environment=KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
 Environment=KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-Environment=KAFKA_CONTROLLER_QUORUM_VOTERS=0@kafka-0.saoirse.home.arpa:9093,1@kafka-1.saoirse.home.arpa:9093,2@kafka-2.saoirse.home.arpa:9093
-Environment=KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-0.saoirse.home.arpa:9092
+Environment=KAFKA_CONTROLLER_QUORUM_VOTERS=1@kafka-1.saoirse.home.arpa:9093,2@kafka-2.saoirse.home.arpa:9093,3@kafka-3.saoirse.home.arpa:9093
+Environment=KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka-3.saoirse.home.arpa:9092
 Environment=KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=3
 Environment=KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=2
 Environment=KAFKA_LOG_DIRS=/var/lib/kafka/data
