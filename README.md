@@ -4,20 +4,17 @@ Podman pods & containers for devel and testing.
 
 ## Usage
 
-### Creating pods and containers
+### Installing quadlet files
 
-* Run the scripts as root to create rootfull pods and containers
-* Run the scripts to generate the pods first to create the pods, networks and infras
+* Copy `.pod`, `.container` and `.volume` files to `/etc/containers/systemd/`
 
 ### Systemd service generation
 
-* After pods and containers created, run `podman generate-systemd --files --new <pod name>`
-* Move the services' files to `/etc/systemd/system`
-* Run `chcon system_u:object_r:systemd_unit_file_t:s0 <service file name>` for each of the services
-* Reload systemd daemon and remove the pods & containers
-* Run the pods by running the systemd services
+* Reload systemd `sudo systemctl daemon-reload`
+* Systemd will generate services from the installed files
+* Run container using `systemctl start`, e.g. for `postgres.container`, run `systemctl start postgres.service`
 
-## Why systemd?
+## Why quadlet?
 
 * Supports podman auto-update
-* Easier to maintain as systemd service files (podman-compose sucks)
+* Easier to maintain as quadlet files (podman-compose sucks)
