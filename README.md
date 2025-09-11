@@ -6,7 +6,7 @@ Podman pods & containers for devel and testing.
 
 ### Installing quadlet files
 
-* Copy `.pod`, `.container` and `.volume` files to `/etc/containers/systemd/`
+* Copy `.pod`, `.container`, `.build` and `.volume` files to `/etc/containers/systemd/`
 
 ### Creating directories for volumes
 
