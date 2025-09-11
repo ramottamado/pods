@@ -1,3 +1,4 @@
 [Volume]
 Device=/var/opt/containers/postgres
 Options=bind
+Copy=true

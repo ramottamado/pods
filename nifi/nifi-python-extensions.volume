@@ -1,3 +1,4 @@
 [Volume]
 Device=/var/opt/containers/nifi/opt/nifi/nifi-current/python_extensions
 Options=bind
+Copy=true

@@ -8,6 +8,11 @@ Podman pods & containers for devel and testing.
 
 * Copy `.pod`, `.container` and `.volume` files to `/etc/containers/systemd/`
 
+### Creating directories for volumes
+
+* All of the volumes here are bind-mounted, hence you need to create the directory first
+* Example: In [postgres.volume](postgres/postgres.volume), `Device=/var/opt/containers/postgres` means `/var/opt/containers/postgres` dir should be created first
+
 ### Systemd service generation
 
 * Reload systemd `sudo systemctl daemon-reload`

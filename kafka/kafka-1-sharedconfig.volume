@@ -1,3 +1,4 @@
 [Volume]
 Device=/var/opt/containers/kafka-1/sharedconfig
 Options=bind
+Copy=true

@@ -1,3 +1,4 @@
 [Volume]
 Device=/var/opt/containers/nifi/opt/nifi/nifi-current/conf
 Options=bind
+Copy=true
