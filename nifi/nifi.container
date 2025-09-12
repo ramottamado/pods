@@ -28,5 +28,6 @@ Environment=TRUSTSTORE_PASSWORD=changeit
 Environment=TRUSTSTORE_TYPE=JKS
 Environment=NIFI_WEB_HTTPS_PORT=8443
 Environment=NIFI_WEB_PROXY_HOST=nifi.saoirse.home.arpa
+Environment=NIFI_WEB_PROXY_CONTEXT_PATH=/
 Environment=AUTH=tls
 Environment=INITIAL_ADMIN_IDENTITY="CN=Tamado Sitohang, O=Saoirse, C=ID"
