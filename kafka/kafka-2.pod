@@ -1,0 +1,11 @@
+[Unit]
+Description=Kafka Node 2 Pod
+
+[Service]
+Restart=on-failure
+
+[Pod]
+ExitPolicy=continue
+HostName=kafka-2.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.12

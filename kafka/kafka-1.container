@@ -7,11 +7,9 @@ SuccessExitStatus=143
 SuccessExitStatus=137
 
 [Container]
+Pod=kafka-1.pod
 Image=docker.io/apache/kafka:latest
 AutoUpdate=registry
-HostName=kafka-1.saoirse.home.arpa
-DNS=10.88.0.2
-IP=10.88.0.11
 Volume=kafka-1-data.volume:/var/lib/kafka/data
 Volume=kafka-1-secrets.volume:/etc/kafka/secrets
 Volume=kafka-1-sharedconfig.volume:/mnt/shared/config
@@ -28,4 +26,4 @@ Environment=KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=3
 Environment=KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=2
 Environment=KAFKA_LOG_DIRS=/var/lib/kafka/data
 Environment=TZ=Asia/Jakarta
-Memory=1g
+Environment=KAFKA_HEAP_OPTS="-Xms256M -Xmx1G"

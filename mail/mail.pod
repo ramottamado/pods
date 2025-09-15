@@ -5,7 +5,6 @@ Description=Mail Server Pod
 Restart=on-failure
 
 [Pod]
-PodName=mail
 ExitPolicy=continue
 DNS=10.88.0.2
 IP=10.88.0.141

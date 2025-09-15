@@ -1,0 +1,17 @@
+[Unit]
+Description=Kafka Connect Node 3
+After=kafka-3.container
+Requires=kafka-3.container
+
+[Service]
+Restart=on-failure
+SuccessExitStatus=143
+SuccessExitStatus=137
+
+[Container]
+Pod=kafka-3.pod
+Exec=/opt/kafka/bin/connect-distributed.sh /connect-distributed.properties
+Image=docker.io/apache/kafka:4.0.0
+Environment=KAFKA_HEAP_OPTS="-Xms256M -Xmx512M"
+Volume=/var/opt/containers/kafka-connect/connectors:/opt/connectors:z
+Volume=/var/opt/containers/kafka-3/connect/connect-distributed.properties:/connect-distributed.properties:z
