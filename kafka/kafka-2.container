@@ -7,9 +7,11 @@ SuccessExitStatus=143
 SuccessExitStatus=137
 
 [Container]
-Pod=kafka-2.pod
 Image=docker.io/apache/kafka:latest
 AutoUpdate=registry
+HostName=kafka-2.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.12
 Volume=kafka-2-data.volume:/var/lib/kafka/data
 Volume=kafka-2-secrets.volume:/etc/kafka/secrets
 Volume=kafka-2-sharedconfig.volume:/mnt/shared/config

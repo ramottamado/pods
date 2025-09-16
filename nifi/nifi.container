@@ -26,6 +26,8 @@ Environment=KEYSTORE_TYPE=JKS
 Environment=TRUSTSTORE_PATH=/opt/certs/truststore.jks
 Environment=TRUSTSTORE_PASSWORD=changeit
 Environment=TRUSTSTORE_TYPE=JKS
+Environment=NIFI_JVM_HEAP_INIT=256M
+Environment=NIFI_JVM_HEAP_MAX=1G
 Environment=NIFI_WEB_HTTPS_PORT=8443
 Environment=NIFI_WEB_PROXY_HOST=nifi.saoirse.home.arpa
 Environment=NIFI_WEB_PROXY_CONTEXT_PATH=/
