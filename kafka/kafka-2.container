@@ -1,5 +1,6 @@
 [Unit]
 Description=Kafka Node 2
+PartOf=kafka-cluster.target
 
 [Service]
 Restart=on-failure
@@ -7,7 +8,7 @@ SuccessExitStatus=143
 SuccessExitStatus=137
 
 [Container]
-Image=docker.io/apache/kafka:latest
+Image=docker.io/apache/kafka:4.1.0
 AutoUpdate=registry
 HostName=kafka-2.saoirse.home.arpa
 DNS=10.88.0.2

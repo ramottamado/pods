@@ -1,0 +1,6 @@
+[Unit]
+Description=Kafka Connect Cluster
+Requires=kafka-cluster.target
+After=kafka-cluster.target
+Wants=connect-1.service connect-2.service connect-3.service
+After=connect-1.service connect-2.service connect-3.service
