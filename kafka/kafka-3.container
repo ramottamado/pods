@@ -29,4 +29,5 @@ Environment=KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=3
 Environment=KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=2
 Environment=KAFKA_LOG_DIRS=/var/lib/kafka/data
 Environment=KAFKA_HEAP_OPTS="-Xms256M -Xmx1G"
+Environment=KAFKA_LOG4J_ROOT_LOGLEVEL=WARN
 Environment=TZ=Asia/Jakarta

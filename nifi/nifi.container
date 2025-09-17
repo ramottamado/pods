@@ -33,3 +33,4 @@ Environment=NIFI_WEB_PROXY_HOST=nifi.saoirse.home.arpa
 Environment=NIFI_WEB_PROXY_CONTEXT_PATH=/
 Environment=AUTH=tls
 Environment=INITIAL_ADMIN_IDENTITY="CN=Tamado Sitohang, O=Saoirse, C=ID"
+Environment=TZ=Asia/Jakarta
