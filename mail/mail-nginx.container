@@ -1,0 +1,17 @@
+[Unit]
+Description=Mail nginx sidecar
+After=roundcube.container
+Requires=roundcube.container
+
+[Service]
+Restart=on-failure
+
+[Container]
+Pod=mail.pod
+Image=docker.io/library/nginx:1.29-alpine
+AutoUpdate=registry
+CgroupsMode=no-conmon
+Volume=/var/opt/containers/mail/roundcube/data:/var/www/html:Z
+Volume=/var/opt/containers/mail/nginx/mail.conf:/etc/nginx/conf.d/mail.conf:z
+Volume=/var/opt/containers/mail/nginx/mail.crt:/etc/mail.crt:z
+Volume=/var/opt/containers/mail/nginx/mail.key:/etc/mail.key:z
