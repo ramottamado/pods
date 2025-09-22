@@ -1,0 +1,16 @@
+[Unit]
+Description=CoreDNS
+After=ns-dnsproxy.container
+Requires=ns-dnsproxy.container
+
+[Service]
+Restart=on-failure
+
+[Container]
+Pod=ns.pod
+Image=docker.io/coredns/coredns:latest
+AutoUpdate=registry
+CgroupsMode=no-conmon
+Volume=/var/opt/containers/ns/coredns/Corefile:/Corefile:z
+Volume=/var/opt/containers/ns/coredns/etc/coredns:/etc/coredns:z
+Memory=1g

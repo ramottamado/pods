@@ -1,7 +1,7 @@
 [Unit]
 Description=Roundcube
-After=dovecot.container
-Requires=dovecot.container
+After=mail-dovecot.container
+Requires=mail-dovecot.container
 
 [Service]
 Restart=on-failure

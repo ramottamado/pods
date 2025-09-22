@@ -1,0 +1,10 @@
+[Unit]
+Description=HAProxy Server
+
+[Container]
+Pod=apps.pod
+Image=docker.io/haproxytech/haproxy-alpine:3.2
+AutoUpdate=registry
+CgroupsMode=no-conmon
+Volume=/var/opt/containers/apps/haproxy:/usr/local/etc/haproxy:z
+Memory=1gb

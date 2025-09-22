@@ -1,7 +1,7 @@
 [Unit]
 Description=Mail nginx sidecar
-After=roundcube.container
-Requires=roundcube.container
+After=mail-roundcube.container
+Requires=mail-roundcube.container
 
 [Service]
 Restart=on-failure
