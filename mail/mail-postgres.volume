@@ -1,0 +1,4 @@
+[Volume]
+Device=/var/opt/containers/mail/postgres
+Options=bind
+Copy=true

@@ -3,9 +3,6 @@ Description=Mail nginx sidecar
 After=mail-roundcube.container
 Requires=mail-roundcube.container
 
-[Service]
-Restart=on-failure
-
 [Container]
 Pod=mail.pod
 Image=docker.io/library/nginx:1.29-alpine

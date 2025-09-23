@@ -1,11 +1,7 @@
 [Unit]
 Description=Mail Server Pod
 
-[Service]
-Restart=on-failure
-
 [Pod]
-ExitPolicy=continue
 DNS=10.88.0.2
 IP=10.88.0.141
 HostName=mail.saoirse.home.arpa

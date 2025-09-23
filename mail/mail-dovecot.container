@@ -1,9 +1,6 @@
 [Unit]
 Description=Dovecot
 
-[Service]
-Restart=on-failure
-
 [Container]
 Pod=mail.pod
 Image=dovecot.build
