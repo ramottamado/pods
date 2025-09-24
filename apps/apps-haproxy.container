@@ -1,5 +1,5 @@
 [Unit]
-Description=HAProxy Server
+Description=Apps HAProxy Reverse Proxy
 
 [Container]
 Pod=apps.pod

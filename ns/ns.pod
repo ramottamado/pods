@@ -1,5 +1,5 @@
 [Unit]
-Description=DNS Pod
+Description=Name Server Pod
 
 [Service]
 Restart=on-failure

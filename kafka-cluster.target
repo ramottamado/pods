@@ -1,4 +1,4 @@
 [Unit]
-Description=Kafka Cluster
+Description=Kafka Cluster Target
 Wants=kafka-1.service kafka-2.service kafka-3.service
 After=kafka-1.service kafka-2.service kafka-3.service

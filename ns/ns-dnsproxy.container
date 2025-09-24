@@ -1,5 +1,5 @@
 [Unit]
-Description=AdGuard DNS Proxy
+Description=Name Server AdGuard DNS Proxy
 
 [Service]
 Restart=on-failure

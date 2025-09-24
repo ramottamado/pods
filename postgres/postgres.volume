@@ -1,3 +1,6 @@
+[Unit]
+Description=PostgreSQL Data Volume
+
 [Volume]
 Device=/var/opt/containers/postgres
 Options=bind

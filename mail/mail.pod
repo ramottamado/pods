@@ -1,5 +1,5 @@
 [Unit]
-Description=Mail Server Pod
+Description=Mailserver Pod
 
 [Pod]
 DNS=10.88.0.2

@@ -1,3 +1,6 @@
+[Unit]
+Description=NiFi State Volume
+
 [Volume]
 Device=/var/opt/containers/nifi/opt/nifi/nifi-current/state
 Options=bind

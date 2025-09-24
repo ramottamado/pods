@@ -1,5 +1,5 @@
 [Unit]
-Description=Roundcube
+Description=Mailserver Roundcube Webmail Service
 After=mail-dovecot.container mail-postgres.container
 Requires=mail-dovecot.container mail-postgres.container
 
@@ -16,3 +16,4 @@ Secret=roundcube_db_password,type=env,target=ROUNDCUBEMAIL_DB_PASSWORD
 Volume=/var/opt/containers/mail/roundcube/config:/var/roundcube/config:z
 Volume=/var/opt/containers/mail/roundcube/ca.crt:/var/roundcube/ca.crt:z
 Volume=/var/opt/containers/mail/roundcube/data:/var/www/html:Z
+Memory=1g

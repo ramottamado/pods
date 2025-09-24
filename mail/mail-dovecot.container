@@ -1,5 +1,5 @@
 [Unit]
-Description=Dovecot
+Description=Mailserver Dovecot IMAP/POP3 Server
 
 [Container]
 Pod=mail.pod

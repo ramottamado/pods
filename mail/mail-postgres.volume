@@ -1,3 +1,6 @@
+[Unit]
+Description=Mailserver PostgreSQL Data Volume
+
 [Volume]
 Device=/var/opt/containers/mail/postgres
 Options=bind

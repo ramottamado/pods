@@ -1,3 +1,6 @@
+[Unit]
+Description=NiFi Database Repository Volume
+
 [Volume]
 Device=/var/opt/containers/nifi/opt/nifi/nifi-current/database_repository
 Options=bind

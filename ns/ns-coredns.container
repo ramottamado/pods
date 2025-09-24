@@ -1,5 +1,5 @@
 [Unit]
-Description=CoreDNS
+Description=Name Server CoreDNS
 After=ns-dnsproxy.container
 Requires=ns-dnsproxy.container
 
