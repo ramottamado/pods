@@ -13,4 +13,3 @@ AutoUpdate=registry
 CgroupsMode=no-conmon
 Volume=/var/opt/containers/ns/coredns/Corefile:/Corefile:z
 Volume=/var/opt/containers/ns/coredns/etc/coredns:/etc/coredns:z
-Memory=1g
