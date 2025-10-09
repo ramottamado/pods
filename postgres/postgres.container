@@ -2,12 +2,16 @@
 Description=PostgreSQL Server
 
 [Container]
-Image=docker.io/library/postgres:17
+Image=docker.io/library/postgres:18
 Exec=postgres
 AutoUpdate=registry
 ShmSize=256m
 HostName=postgres.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.100
-Volume=postgres.volume:/var/lib/postgresql/data
+Secret=postgres_password,type=env,target=POSTGRES_PASSWORD
+Volume=postgres.volume:/var/lib/postgresql:z
 Memory=1g
+
+[Install]
+WantedBy=default.target

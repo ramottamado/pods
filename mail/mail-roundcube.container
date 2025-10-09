@@ -1,17 +1,17 @@
 [Unit]
 Description=Mailserver Roundcube Webmail Service
-After=mail-dovecot.container mail-postgres.container
-Requires=mail-dovecot.container mail-postgres.container
+After=mail-dovecot.container
+Requires=mail-dovecot.container
 
 [Container]
 Pod=mail.pod
 Image=docker.io/roundcube/roundcubemail:1.6.x-fpm-alpine
 AutoUpdate=registry
 CgroupsMode=no-conmon
-Environment=ROUNDCUBEMAIL_DB_TYPE=pgsql
-Environment=ROUNDCUBEMAIL_DB_HOST=mail.saoirse.home.arpa
-Environment=ROUNDCUBEMAIL_DB_NAME=postgres
-Environment=ROUNDCUBEMAIL_DB_USER=postgres
+Environment=ROUNDCUBEMAIL_DB_TYPE=mysql
+Environment=ROUNDCUBEMAIL_DB_HOST=mysql.saoirse.home.arpa
+Environment=ROUNDCUBEMAIL_DB_NAME=roundcube
+Environment=ROUNDCUBEMAIL_DB_USER=roundcube
 Secret=roundcube_db_password,type=env,target=ROUNDCUBEMAIL_DB_PASSWORD
 Volume=/var/opt/containers/mail/roundcube/config:/var/roundcube/config:z
 Volume=/var/opt/containers/mail/roundcube/ca.crt:/var/roundcube/ca.crt:z

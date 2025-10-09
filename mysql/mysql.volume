@@ -1,0 +1,7 @@
+[Unit]
+Description=MySQL Data Volume
+
+[Volume]
+Device=/var/opt/containers/mysql
+Options=bind
+Copy=true
