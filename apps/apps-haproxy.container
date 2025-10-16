@@ -1,6 +1,9 @@
 [Unit]
 Description=Apps HAProxy Reverse Proxy
 
+[Service]
+Restart=always
+
 [Container]
 Pod=apps.pod
 Image=docker.io/haproxytech/haproxy-alpine:3.2
