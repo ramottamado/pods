@@ -1,7 +1,7 @@
 [Unit]
 Description=Mailserver Pod
-After=mysql.container
-Requires=mysql.container
+After=postgres.container
+Requires=postgres.container
 
 [Pod]
 DNS=10.88.0.2

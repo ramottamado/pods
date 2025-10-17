@@ -8,8 +8,8 @@ Pod=mail.pod
 Image=docker.io/roundcube/roundcubemail:1.6.x-fpm-alpine
 AutoUpdate=registry
 CgroupsMode=no-conmon
-Environment=ROUNDCUBEMAIL_DB_TYPE=mysql
-Environment=ROUNDCUBEMAIL_DB_HOST=mysql.saoirse.home.arpa
+Environment=ROUNDCUBEMAIL_DB_TYPE=pgsql
+Environment=ROUNDCUBEMAIL_DB_HOST=postgres.saoirse.home.arpa
 Environment=ROUNDCUBEMAIL_DB_NAME=roundcube
 Environment=ROUNDCUBEMAIL_DB_USER=roundcube
 Secret=roundcube_db_password,type=env,target=ROUNDCUBEMAIL_DB_PASSWORD
