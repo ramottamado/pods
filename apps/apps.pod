@@ -1,7 +1,7 @@
 [Unit]
 Description=Apps Pod
 After=ns.pod
-Requires=ns.pod
+Wants=ns.pod
 
 [Pod]
 ExitPolicy=continue

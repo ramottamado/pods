@@ -1,0 +1,14 @@
+[Unit]
+Description=Trino Coordinator
+
+[Service]
+Restart=on-failure
+
+[Container]
+Image=docker.io/trinodb/trino:latest
+AutoUpdate=registry
+HostName=trino-coord.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.40
+Volume=/var/containers/trino-coord/data:/data:z
+Volume=/var/containers/trino-coord/etc:/etc/trino:z

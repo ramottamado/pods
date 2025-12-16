@@ -16,8 +16,8 @@ Environment=SPARK_WORKER_CORES=2
 Environment=SPARK_WORKER_MEMORY=1G
 Environment=SPARK_DRIVER_MEMORY=1G
 Environment=SPARK_EXECUTOR_MEMORY=1G
-Volume=/var/opt/containers/spark/entrypoint.sh:/entrypoint.sh:z
-Volume=/var/opt/containers/spark/conf:/opt/spark/conf:z
-Volume=/var/opt/containers/spark/work-dir:/opt/spark/work-dir:z
-Volume=/var/opt/containers/spark/worker-2/logs:/opt/spark/logs:z
+Volume=/var/containers/spark/entrypoint.sh:/entrypoint.sh:z
+Volume=/var/containers/spark/conf:/opt/spark/conf:z
+Volume=/var/containers/spark/work-dir:/opt/spark/work-dir:z
+Volume=/var/containers/spark/worker-2/logs:/opt/spark/logs:z
 Memory=2g

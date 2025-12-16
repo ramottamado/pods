@@ -2,6 +2,6 @@
 Description=NiFi Provenance Repository Volume
 
 [Volume]
-Device=/var/opt/containers/nifi/opt/nifi/nifi-current/provenance_repository
+Device=/var/containers/nifi/opt/nifi/nifi-current/provenance_repository
 Options=bind
 Copy=true

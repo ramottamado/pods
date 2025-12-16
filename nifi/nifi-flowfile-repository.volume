@@ -2,6 +2,6 @@
 Description=NiFi Flowfile Repository Volume
 
 [Volume]
-Device=/var/opt/containers/nifi/opt/nifi/nifi-current/flowfile_repository
+Device=/var/containers/nifi/opt/nifi/nifi-current/flowfile_repository
 Options=bind
 Copy=true

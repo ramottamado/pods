@@ -3,4 +3,4 @@ Description=Dovecot Image Build
 
 [Build]
 ImageTag=tamado.codes/library/dovecot:latest
-File=/var/opt/containers/mail/dovecot/Containerfile
+File=/var/containers/mail/dovecot/Containerfile

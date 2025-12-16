@@ -10,8 +10,8 @@ DNS=10.88.0.2
 IP=10.88.0.161
 Environment=SPARK_LOCAL_IP=spark-master.saoirse.home.arpa
 Environment=SPARK_WORKLOAD=master
-Volume=/var/opt/containers/spark/entrypoint.sh:/entrypoint.sh:z
-Volume=/var/opt/containers/spark/conf:/opt/spark/conf:z
-Volume=/var/opt/containers/spark/work-dir:/opt/spark/work-dir:z
-Volume=/var/opt/containers/spark/master/logs:/opt/spark/logs:z
+Volume=/var/containers/spark/entrypoint.sh:/entrypoint.sh:z
+Volume=/var/containers/spark/conf:/opt/spark/conf:z
+Volume=/var/containers/spark/work-dir:/opt/spark/work-dir:z
+Volume=/var/containers/spark/master/logs:/opt/spark/logs:z
 Memory=512m

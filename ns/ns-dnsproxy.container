@@ -9,4 +9,4 @@ Pod=ns.pod
 Image=docker.io/adguard/dnsproxy:latest
 AutoUpdate=registry
 CgroupsMode=no-conmon
-Volume=/var/opt/containers/ns/dnsproxy/config.yaml:/opt/dnsproxy/config.yaml:z
+Volume=/var/containers/ns/dnsproxy/config.yaml:/opt/dnsproxy/config.yaml:z

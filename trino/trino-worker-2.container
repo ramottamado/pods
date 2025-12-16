@@ -1,0 +1,16 @@
+[Unit]
+Description=Trino Worker Node 2
+After=trino-coord.container
+Requires=trino-coord.container
+
+[Service]
+Restart=on-failure
+
+[Container]
+Image=docker.io/trinodb/trino:latest
+AutoUpdate=registry
+HostName=trino-worker-2.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.42
+Volume=/var/containers/trino-worker-2/data:/data:z
+Volume=/var/containers/trino-worker-2/etc:/etc/trino:z

@@ -2,6 +2,6 @@
 Description=NiFi Configuration Volume
 
 [Volume]
-Device=/var/opt/containers/nifi/opt/nifi/nifi-current/conf
+Device=/var/containers/nifi/opt/nifi/nifi-current/conf
 Options=bind
 Copy=true

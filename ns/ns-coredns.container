@@ -11,5 +11,5 @@ Pod=ns.pod
 Image=docker.io/coredns/coredns:latest
 AutoUpdate=registry
 CgroupsMode=no-conmon
-Volume=/var/opt/containers/ns/coredns/Corefile:/Corefile:z
-Volume=/var/opt/containers/ns/coredns/etc/coredns:/etc/coredns:z
+Volume=/var/containers/ns/coredns/Corefile:/Corefile:z
+Volume=/var/containers/ns/coredns/etc/coredns:/etc/coredns:z
