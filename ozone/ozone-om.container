@@ -31,3 +31,4 @@ Environment=CORE-SITE.XML_hadoop.proxyuser.hadoop.hosts="*"
 Environment=CORE-SITE.XML_hadoop.proxyuser.hadoop.groups="*"
 Environment=ENSURE_OM_INITIALIZED="/data/metadata/om/current/VERSION"
 Environment=WAITFOR="ozone-scm.saoirse.home.arpa:9876"
+Memory=1g

@@ -1,4 +1,4 @@
 [Unit]
 Description=Ozone Cluster Target
-Wants=ozone-scm.service ozone-om.service ozone-datanode-1.service ozone-datanode-2.service ozone-datanode-3.service ozone-gateway-pod.service
-After=ozone-scm.service ozone-om.service ozone-datanode-1.service ozone-datanode-2.service ozone-datanode-3.service ozone-gateway-pod.service
+Wants=ozone-scm.service ozone-om.service ozone-datanode.service ozone-gateway-pod.service
+After=ozone-scm.service ozone-om.service ozone-datanode.service ozone-gateway-pod.service

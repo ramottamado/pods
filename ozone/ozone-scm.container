@@ -26,3 +26,4 @@ Environment=OZONE-SITE.XML_ozone.scm.client.address="ozone-scm.saoirse.home.arpa
 Environment=OZONE-SITE.XML_ozone.scm.datanode.id.dir="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.scm.names="ozone-scm.saoirse.home.arpa"
 Environment=ENSURE_SCM_INITIALIZED="/data/metadata/scm/current/VERSION"
+Memory=1g
