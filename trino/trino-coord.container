@@ -1,8 +1,10 @@
 [Unit]
 Description=Trino Coordinator
+PartOf=trino-cluster.target
 
 [Service]
 Restart=on-failure
+SuccessExitStatus=143
 
 [Container]
 Image=docker.io/trinodb/trino:latest
@@ -12,3 +14,4 @@ DNS=10.88.0.2
 IP=10.88.0.40
 Volume=/var/containers/trino-coord/data:/data:z
 Volume=/var/containers/trino-coord/etc:/etc/trino:z
+Volume=/var/containers/trino-catalog:/etc/trino/catalog:z

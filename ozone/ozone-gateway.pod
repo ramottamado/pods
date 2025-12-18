@@ -1,0 +1,11 @@
+[Unit]
+Description=Ozone Gateway Pod
+PartOf=ozone-cluster.target
+Requires=ozone-om.container
+After=ozone-om.container
+
+[Pod]
+DNS=10.88.0.2
+IP=10.88.0.70
+HostName=ozone-gateway.saoirse.home.arpa
+Volume=/var/containers/ozone-gateway/data:/data:z

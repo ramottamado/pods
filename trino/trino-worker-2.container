@@ -1,10 +1,12 @@
 [Unit]
 Description=Trino Worker Node 2
+PartOf=trino-cluster.target
 After=trino-coord.container
 Requires=trino-coord.container
 
 [Service]
 Restart=on-failure
+SuccessExitStatus=143
 
 [Container]
 Image=docker.io/trinodb/trino:latest
@@ -14,3 +16,4 @@ DNS=10.88.0.2
 IP=10.88.0.42
 Volume=/var/containers/trino-worker-2/data:/data:z
 Volume=/var/containers/trino-worker-2/etc:/etc/trino:z
+Volume=/var/containers/trino-catalog:/etc/trino/catalog:z

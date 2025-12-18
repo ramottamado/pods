@@ -1,0 +1,28 @@
+[Unit]
+Description=Ozone Storage Container Manager
+PartOf=ozone-cluster.target
+
+[Service]
+Restart=on-failure
+SuccessExitStatus=143
+
+[Container]
+Exec=ozone scm
+Image=docker.io/apache/ozone:2.0.0
+AutoUpdate=registry
+HostName=ozone-scm.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.78
+Volume=/var/containers/ozone-scm/data:/data:z
+Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
+Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
+Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"
+Environment=OZONE-SITE.XML_ozone.om.http-address="ozone-om.saoirse.home.arpa:9874"
+Environment=OZONE-SITE.XML_ozone.recon.address="ozone-gateway.saoirse.home.arpa:9891"
+Environment=OZONE-SITE.XML_ozone.recon.db.dir="/data/metadata/recon"
+Environment=OZONE-SITE.XML_ozone.replication="1"
+Environment=OZONE-SITE.XML_ozone.scm.block.client.address="ozone-scm.saoirse.home.arpa"
+Environment=OZONE-SITE.XML_ozone.scm.client.address="ozone-scm.saoirse.home.arpa"
+Environment=OZONE-SITE.XML_ozone.scm.datanode.id.dir="/data/metadata"
+Environment=OZONE-SITE.XML_ozone.scm.names="ozone-scm.saoirse.home.arpa"
+Environment=ENSURE_SCM_INITIALIZED="/data/metadata/scm/current/VERSION"
