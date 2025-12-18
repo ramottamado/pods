@@ -10,6 +10,8 @@ Exec=ozone recon
 Pod=ozone-gateway.pod
 Image=docker.io/apache/ozone:2.0.0
 AutoUpdate=registry
+HealthCmd="/usr/bin/curl http://ozone-gateway.saoirse.home.arpa:9888"
+Notify=healthy
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"

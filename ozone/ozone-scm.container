@@ -13,6 +13,8 @@ AutoUpdate=registry
 HostName=ozone-scm.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.78
+HealthCmd="/usr/bin/curl http://ozone-scm.saoirse.home.arpa:9876"
+Notify=healthy
 Volume=/var/containers/ozone-scm/data:/data:z
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"

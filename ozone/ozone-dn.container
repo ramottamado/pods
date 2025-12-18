@@ -1,8 +1,8 @@
 [Unit]
 Description=Ozone Datanode
 PartOf=ozone-cluster.target
-Requires=ozone-om.container
-After=ozone-om.container
+Requires=ozone-recon.container
+After=ozone-recon.container
 
 [Service]
 Restart=on-failure
@@ -12,10 +12,10 @@ SuccessExitStatus=143
 Exec=ozone datanode
 Image=docker.io/apache/ozone:2.0.0
 AutoUpdate=registry
-HostName=ozone-datanode.saoirse.home.arpa
+HostName=ozone-dn.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.71
-Volume=/var/containers/ozone-datanode/data:/data:z
+Volume=/var/containers/ozone-dn/data:/data:z
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"
