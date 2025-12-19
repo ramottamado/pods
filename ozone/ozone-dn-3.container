@@ -1,24 +1,21 @@
 [Unit]
-Description=Ozone Manager
+Description=Ozone Datanode 3
 PartOf=ozone-cluster.target
-Requires=ozone-scm.container
-After=ozone-scm.container
+Requires=ozone-recon.container
+After=ozone-recon.container
 
 [Service]
 Restart=on-failure
 SuccessExitStatus=143
 
 [Container]
-Exec=ozone om
+Exec=ozone datanode
 Image=docker.io/apache/ozone:2.0.0
 AutoUpdate=registry
-HostName=ozone-om.saoirse.home.arpa
+HostName=ozone-dn-3.saoirse.home.arpa
 DNS=10.88.0.2
-IP=10.88.0.79
-Notify=healthy
-HealthCmd="nc -z ozone-om.saoirse.home.arpa 9862"
-HealthInterval=10s
-Volume=/var/containers/ozone-om/data:/data:z
+IP=10.88.0.73
+Volume=/var/containers/ozone-dn-3/data:/data:z
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"
@@ -32,9 +29,5 @@ Environment=OZONE-SITE.XML_ozone.scm.datanode.id.dir="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.scm.names="ozone-scm.saoirse.home.arpa"
 Environment=OZONE-SITE.XML_ozone.scm.container.size="1gb"
 Environment=OZONE-SITE.XML_ozone.scm.block.size="64mb"
-Environment=CORE-SITE.XML_hadoop.proxyuser.hadoop.hosts="*"
-Environment=CORE-SITE.XML_hadoop.proxyuser.hadoop.groups="*"
-Environment=ENSURE_OM_INITIALIZED="/data/metadata/om/current/VERSION"
-Environment=WAITFOR="ozone-scm.saoirse.home.arpa:9876"
 Environment=OZONE_HEAPSIZE_MAX=256
 Memory=1g

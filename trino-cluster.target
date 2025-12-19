@@ -1,4 +1,4 @@
 [Unit]
 Description=Trino Cluster Target
-Wants=trino-coord.service trino-worker-1.service trino-worker-2.service trino-worker-3.service
-After=trino-coord.service trino-worker-1.service trino-worker-2.service trino-worker-3.service
+Wants=trino-coord.service trino-worker-1.service trino-worker-2.service
+After=trino-coord.service trino-worker-1.service trino-worker-2.service
