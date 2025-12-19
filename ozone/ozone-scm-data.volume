@@ -1,0 +1,7 @@
+[Unit]
+Description=Ozone SCM Data Volume
+
+[Volume]
+Device=/var/containers/ozone-scm/data
+Options=bind
+Copy=true

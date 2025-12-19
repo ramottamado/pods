@@ -15,7 +15,7 @@ AutoUpdate=registry
 HostName=ozone-dn-1.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.71
-Volume=/var/containers/ozone-dn-1/data:/data:z
+Volume=ozone-dn-1-data.volume:/data:z
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"

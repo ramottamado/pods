@@ -1,0 +1,7 @@
+[Unit]
+Description=Ozone Recon Data Volume
+
+[Volume]
+Device=/var/containers/ozone-recon/data
+Options=bind
+Copy=true

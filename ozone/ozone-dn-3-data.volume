@@ -1,0 +1,7 @@
+[Unit]
+Description=Ozone Datanode 3 Data Volume
+
+[Volume]
+Device=/var/containers/ozone-dn-3/data
+Options=bind
+Copy=true
