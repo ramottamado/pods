@@ -7,7 +7,6 @@ Requires=mail-dovecot.container
 Pod=mail.pod
 Image=docker.io/roundcube/roundcubemail:1.6.x-fpm-alpine
 AutoUpdate=registry
-CgroupsMode=no-conmon
 Environment=ROUNDCUBEMAIL_DB_TYPE=pgsql
 Environment=ROUNDCUBEMAIL_DB_HOST=postgres.saoirse.home.arpa
 Environment=ROUNDCUBEMAIL_DB_NAME=roundcube

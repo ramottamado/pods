@@ -4,7 +4,6 @@ Description=Mailserver Dovecot IMAP/POP3 Server
 [Container]
 Pod=mail.pod
 Image=dovecot.build
-CgroupsMode=no-conmon
 Volume=/var/containers/mail/dovecot/mail.key:/etc/dovecot/mail.key:z
 Volume=/var/containers/mail/dovecot/mail.crt:/etc/dovecot/mail.crt:z
 Volume=/var/containers/mail/dovecot/dovecot.conf:/etc/dovecot/dovecot.conf:z

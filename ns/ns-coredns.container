@@ -10,6 +10,5 @@ Restart=on-failure
 Pod=ns.pod
 Image=docker.io/coredns/coredns:latest
 AutoUpdate=registry
-CgroupsMode=no-conmon
 Volume=/var/containers/ns/coredns/Corefile:/Corefile:z
 Volume=/var/containers/ns/coredns/etc/coredns:/etc/coredns:z

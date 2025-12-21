@@ -28,8 +28,8 @@ Environment=OZONE-SITE.XML_ozone.scm.block.client.address="ozone-scm.saoirse.hom
 Environment=OZONE-SITE.XML_ozone.scm.client.address="ozone-scm.saoirse.home.arpa"
 Environment=OZONE-SITE.XML_ozone.scm.datanode.id.dir="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.scm.names="ozone-scm.saoirse.home.arpa"
-Environment=OZONE-SITE.XML_ozone.scm.container.size="1gb"
-Environment=OZONE-SITE.XML_ozone.scm.block.size="64mb"
+Environment=OZONE-SITE.XML_ozone.scm.container.size="512mb"
+Environment=OZONE-SITE.XML_ozone.scm.block.size="16mb"
 Environment=ENSURE_SCM_INITIALIZED="/data/metadata/scm/current/VERSION"
 Environment=OZONE_HEAPSIZE_MAX=256
 Memory=1g

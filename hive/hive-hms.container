@@ -13,6 +13,6 @@ DNS=10.88.0.2
 IP=10.88.0.80
 Volume=/var/containers/hive/hms/data:/opt/hive/data/warehouse:z
 Volume=/var/containers/hive/jars:/tmp/ext-jars:z
-Mount=type=bind,source=/var/containers/hive/hms/etc/metastore-site.xml,target=/opt/hive/conf/metastore-site.xml
+Mount=type=bind,source=/var/containers/hive/hms/etc/metastore-site.xml,target=/opt/hive/conf/metastore-site.xml,readonly=true
 EnvironmentFile=/var/containers/hive/env.sh
 Memory=1g

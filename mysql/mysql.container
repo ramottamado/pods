@@ -4,13 +4,9 @@ Description=MySQL Server
 [Container]
 Image=docker.io/library/mysql:9
 AutoUpdate=registry
-ShmSize=256m
 HostName=mysql.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.99
 Secret=mysql_password,type=env,target=MYSQL_ROOT_PASSWORD
 Volume=mysql.volume:/var/lib/mysql:z
 Memory=1g
-
-[Install]
-WantedBy=default.target

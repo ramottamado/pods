@@ -7,7 +7,6 @@ Requires=mail-roundcube.container
 Pod=mail.pod
 Image=docker.io/library/nginx:1.29-alpine
 AutoUpdate=registry
-CgroupsMode=no-conmon
 Volume=/var/containers/mail/roundcube/data:/var/www/html:Z
 Volume=/var/containers/mail/nginx/mail.conf:/etc/nginx/conf.d/mail.conf:z
 Volume=/var/containers/mail/nginx/mail.crt:/etc/mail.crt:z

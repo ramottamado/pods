@@ -2,6 +2,5 @@
 Description=Ozone Datanode 3 Data Volume
 
 [Volume]
-Device=/var/containers/ozone-dn-3/data
-Options=bind
-Copy=true
+Device=/var/containers/ozone-dn-3-data.img
+Type=ext4
