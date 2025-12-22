@@ -1,6 +1,8 @@
 [Unit]
 Description=Trino Coordinator
 PartOf=trino-cluster.target
+Requires=postgres.container versitygw.container hive.pod
+After=postgres.container versitygw.container hive.pod
 
 [Service]
 Restart=on-failure

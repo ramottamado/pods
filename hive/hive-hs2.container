@@ -1,7 +1,7 @@
 [Unit]
-Description=Hive Metastore
-After=postgres.container versitygw.container
-Requires=postgres.container versitygw.container
+Description=Hive HS2
+Requires=hive-hms.container
+After=hive-hms.container
 
 [Service]
 Restart=on-failure
@@ -14,7 +14,7 @@ AutoUpdate=registry
 Secret=versitygw_root_access_key,type=env,target=AWS_ACCESS_KEY_ID
 Secret=versitygw_root_secret_key,type=env,target=AWS_SECRET_ACCESS_KEY
 Mount=type=bind,source=/var/containers/hive/etc/metastore-site.xml,target=/opt/hive/conf/metastore-site.xml,readonly=true
-Environment=SERVICE_NAME=metastore
+Environment=SERVICE_NAME=hiveserver2
 Environment=SERVICE_OPTS="-Xmx1G"
 EnvironmentFile=/var/containers/hive/env.sh
 Memory=1152M

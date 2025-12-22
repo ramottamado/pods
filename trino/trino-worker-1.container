@@ -1,8 +1,8 @@
 [Unit]
 Description=Trino Worker Node 1
 PartOf=trino-cluster.target
-After=trino-coord.container
 Requires=trino-coord.container
+After=trino-coord.container
 
 [Service]
 Restart=on-failure
