@@ -1,0 +1,15 @@
+[Unit]
+Description=Versity S3 Gateway
+
+[Container]
+Image=docker.io/versity/versitygw:latest
+AutoUpdate=registry
+HostName=versitygw.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.60
+Secret=versitygw_root_access_key,type=env,target=ROOT_ACCESS_KEY
+Secret=versitygw_root_secret_key,type=env,target=ROOT_SECRET_KEY
+Volume=/var/containers/versitygw/data:/data:z
+Environment=VGW_BACKEND=posix
+Environment=VGW_BACKEND_ARG=/data
+EnvironmentFile=/var/containers/versitygw/env.sh

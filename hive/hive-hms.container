@@ -11,6 +11,8 @@ AutoUpdate=registry
 HostName=hive-hms.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.80
+Secret=versitygw_root_access_key,type=env,target=AWS_ACCESS_KEY_ID
+Secret=versitygw_root_secret_key,type=env,target=AWS_SECRET_ACCESS_KEY
 Volume=/var/containers/hive/hms/data:/opt/hive/data/warehouse:z
 Volume=/var/containers/hive/jars:/tmp/ext-jars:z
 Mount=type=bind,source=/var/containers/hive/hms/etc/metastore-site.xml,target=/opt/hive/conf/metastore-site.xml,readonly=true
