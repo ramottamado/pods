@@ -14,6 +14,8 @@ AutoUpdate=registry
 HostName=trino-worker-1.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.41
+HealthCmd=none
 Volume=/var/containers/trino-worker-1/data:/data:z
 Volume=/var/containers/trino-worker-1/etc:/etc/trino:z
 Volume=/var/containers/trino-catalog:/etc/trino/catalog:z
+PodmanArgs=--cpus=2
