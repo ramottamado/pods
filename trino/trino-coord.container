@@ -14,7 +14,6 @@ AutoUpdate=registry
 HostName=trino-coord.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.40
-HealthCmd=none
 Volume=/var/containers/trino-coord/data:/data:z
 Volume=/var/containers/trino-coord/etc:/etc/trino:z
 Volume=/var/containers/trino-catalog:/etc/trino/catalog:z
