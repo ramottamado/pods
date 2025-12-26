@@ -13,8 +13,8 @@ Image=docker.io/apache/hive:4.2.0
 AutoUpdate=registry
 Secret=versitygw_root_access_key,type=env,target=AWS_ACCESS_KEY_ID
 Secret=versitygw_root_secret_key,type=env,target=AWS_SECRET_ACCESS_KEY
-Mount=type=bind,source=/var/containers/hive/trustStore.jks,target=/trustStore.jks,relabel=private
-Mount=type=bind,source=/var/containers/hive/hiveKeyStore.jks,target=/hiveKeyStore.jks,relabel=private
+Mount=type=bind,source=/var/containers/hive/trustStore.jks,target=/trustStore.jks,relabel=shared
+Mount=type=bind,source=/var/containers/hive/hiveKeyStore.jks,target=/hiveKeyStore.jks,relabel=shared
 Mount=type=bind,source=/var/containers/hive/etc/core-site.xml.template,target=/opt/hive/conf/core-site.xml.template,relabel=shared,readonly=true
 Mount=type=bind,source=/var/containers/hive/etc/hiveserver2-site.xml,target=/opt/hive/conf/hiveserver2-site.xml,relabel=shared,readonly=true
 Environment=SERVICE_NAME=hiveserver2
