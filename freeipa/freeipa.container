@@ -1,0 +1,16 @@
+[Unit]
+Description=FreeIPA Container
+Requires=ns.pod
+After=ns.pod
+
+[Container]
+Image=quay.io/freeipa/freeipa-server:fedora-43
+AutoUpdate=registry
+HostName=ipa.saoirse.home.arpa
+DNS=10.88.0.2
+IP=10.88.0.10
+Volume=/var/containers/freeipa/data:/data:Z
+ReadOnly=true
+
+[Install]
+WantedBy=default.target
