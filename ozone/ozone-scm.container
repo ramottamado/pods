@@ -10,13 +10,12 @@ SuccessExitStatus=143
 Exec=ozone scm
 Image=docker.io/apache/ozone:2.0.0
 AutoUpdate=registry
-HostName=ozone-scm.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.78
+HostName=ozone-scm.saoirse.home.arpa
 HealthCmd="nc -z ozone-scm.saoirse.home.arpa 9861"
 HealthInterval=10s
 Notify=healthy
-Volume=ozone-scm-data.volume:/data:z
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"
@@ -32,4 +31,5 @@ Environment=OZONE-SITE.XML_ozone.scm.container.size="512mb"
 Environment=OZONE-SITE.XML_ozone.scm.block.size="16mb"
 Environment=ENSURE_SCM_INITIALIZED="/data/metadata/scm/current/VERSION"
 Environment=OZONE_HEAPSIZE_MAX=256
+Volume=ozone-scm-data.volume:/data:z
 Memory=1g

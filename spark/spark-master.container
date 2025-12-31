@@ -2,12 +2,12 @@
 Description=Spark Master
 
 [Container]
-Image=docker.io/library/spark:4.0.0-python3
 Exec=/entrypoint.sh
+Image=docker.io/library/spark:4.0.0-python3
 AutoUpdate=registry
-HostName=spark-master.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.161
+HostName=spark-master.saoirse.home.arpa
 Environment=SPARK_LOCAL_IP=spark-master.saoirse.home.arpa
 Environment=SPARK_WORKLOAD=master
 Volume=/var/containers/spark/entrypoint.sh:/entrypoint.sh:z

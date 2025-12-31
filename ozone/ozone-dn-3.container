@@ -12,10 +12,9 @@ SuccessExitStatus=143
 Exec=ozone datanode
 Image=docker.io/apache/ozone:2.0.0
 AutoUpdate=registry
-HostName=ozone-dn-3.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.73
-Volume=ozone-dn-3-data.volume:/data:z
+HostName=ozone-dn-3.saoirse.home.arpa
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"
@@ -30,4 +29,5 @@ Environment=OZONE-SITE.XML_ozone.scm.names="ozone-scm.saoirse.home.arpa"
 Environment=OZONE-SITE.XML_ozone.scm.container.size="512mb"
 Environment=OZONE-SITE.XML_ozone.scm.block.size="16mb"
 Environment=OZONE_HEAPSIZE_MAX=256
+Volume=ozone-dn-3-data.volume:/data:z
 Memory=1g

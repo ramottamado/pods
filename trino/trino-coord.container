@@ -11,12 +11,12 @@ SuccessExitStatus=143
 [Container]
 Image=docker.io/trinodb/trino:latest
 AutoUpdate=registry
-HostName=trino-coord.saoirse.home.arpa
 DNS=10.88.0.2
 IP=10.88.0.40
-Secret=versitygw_root_access_key,type=env,target=S3_ACCESS_KEY
-Secret=versitygw_root_secret_key,type=env,target=S3_SECRET_KEY
-Secret=postgres_password,type=env,target=POSTGRES_PASSWORD
+HostName=trino-coord.saoirse.home.arpa
+Secret=type=env,source=versitygw-root-access-key,target=S3_ACCESS_KEY
+Secret=type=env,source=versitygw-root-secret-key,target=S3_SECRET_KEY
+Secret=type=env,source=postgres-password,target=POSTGRES_PASSWORD
 Volume=/var/containers/trino-coord/data:/data:z
 Volume=/var/containers/trino-coord/etc:/etc/trino:z
 Volume=/var/containers/trino-catalog:/etc/trino/catalog:z
