@@ -11,8 +11,7 @@ Environment=ROUNDCUBEMAIL_DB_TYPE=pgsql
 Environment=ROUNDCUBEMAIL_DB_HOST=postgres.saoirse.home.arpa
 Environment=ROUNDCUBEMAIL_DB_NAME=roundcube
 Environment=ROUNDCUBEMAIL_DB_USER=roundcube
-Secret=type=env,source=roundcube-db-password,target=ROUNDCUBEMAIL_DB_PASSWORD
+Secret=roundcube-db-password,type=env,target=ROUNDCUBEMAIL_DB_PASSWORD
+Mount=type=bind,source=/var/containers/mail/roundcube/ca.crt,target=/var/roundcube/ca.crt,relabel=private
 Volume=/var/containers/mail/roundcube/config:/var/roundcube/config:z
-Volume=/var/containers/mail/roundcube/ca.crt:/var/roundcube/ca.crt:z
-Volume=/var/containers/mail/roundcube/data:/var/www/html:Z
 Memory=1g

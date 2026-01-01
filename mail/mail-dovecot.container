@@ -1,12 +1,13 @@
 [Unit]
 Description=Mailserver Dovecot IMAP/POP3 Server
+Requires=freeipa.container
+After=freeipa.container
 
 [Container]
 Pod=mail.pod
 Image=dovecot.build
-Volume=/var/containers/mail/dovecot/mail.key:/etc/dovecot/mail.key:z
-Volume=/var/containers/mail/dovecot/mail.crt:/etc/dovecot/mail.crt:z
-Volume=/var/containers/mail/dovecot/dovecot.conf:/etc/dovecot/dovecot.conf:z
-Volume=/var/containers/mail/dovecot/passwd:/etc/dovecot/passwd:z
-Volume=/var/containers/mail/tamado:/tamado:z
+Secret=mail-ldap-auth-pass-config,type=mount,target=/etc/dovecot/conf.d/00-ldap.conf
+Mount=type=bind,source=/var/containers/mail/dovecot/mail.key,target=/etc/dovecot/mail.key,relabel=shared
+Mount=type=bind,source=/var/containers/mail/dovecot/mail.crt,target=/etc/dovecot/mail.crt,relabel=shared
+Mount=type=bind,source=/var/containers/mail/dovecot/dovecot.conf,target=/etc/dovecot/dovecot.conf,relabel=shared
 Memory=1g

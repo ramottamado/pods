@@ -1,0 +1,7 @@
+[Unit]
+Description=Mailserver DocumentRoot Volume
+
+[Volume]
+Device=/var/containers/mail/documentroot
+Options=bind
+Copy=true

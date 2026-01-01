@@ -8,6 +8,8 @@ ExitPolicy=stop
 DNS=10.88.0.2
 IP=10.88.0.141
 HostName=mail.saoirse.home.arpa
+Volume=mail-homedir.volume:/var/home:Z
+Volume=mail-documentroot.volume:/var/www/html:Z
 
 [Install]
 WantedBy=default.target

@@ -35,7 +35,7 @@ Environment=LDAP_TLS_TRUSTSTORE=/opt/certs/truststore.p12
 Environment=LDAP_TLS_TRUSTSTORE_PASSWORD=changeit
 Environment=LDAP_TLS_TRUSTSTORE_TYPE=PKCS12
 Environment=TZ=Asia/Jakarta
-Secret=type=env,source=freeipa-admin-password,target=LDAP_MANAGER_PASSWORD
+Secret=freeipa-admin-password,type=env,target=LDAP_MANAGER_PASSWORD
 Volume=/var/containers/nifi/opt/certs:/opt/certs:z
 Volume=/var/containers/nifi/data:/data:z
 Volume=nifi-logs.volume:/opt/nifi/nifi-current/logs

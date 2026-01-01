@@ -4,3 +4,4 @@ Description=Dovecot Image Build
 [Build]
 ImageTag=tamado.codes/library/dovecot:latest
 File=/var/containers/mail/dovecot/Containerfile
+SetWorkingDirectory=/var/containers/mail/dovecot

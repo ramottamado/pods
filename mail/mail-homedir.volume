@@ -1,0 +1,7 @@
+[Unit]
+Description=Mailserver Homedir Volume
+
+[Volume]
+Device=/var/containers/mail/home
+Options=bind
+Copy=true
