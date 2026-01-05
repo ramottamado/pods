@@ -12,6 +12,6 @@ Environment=ROUNDCUBEMAIL_DB_HOST=postgres.saoirse.home.arpa
 Environment=ROUNDCUBEMAIL_DB_NAME=roundcube
 Environment=ROUNDCUBEMAIL_DB_USER=roundcube
 Secret=roundcube-db-password,type=env,target=ROUNDCUBEMAIL_DB_PASSWORD
-Mount=type=bind,source=/var/containers/mail/roundcube/ca.crt,target=/var/roundcube/ca.crt,relabel=private
+Mount=type=bind,src=/var/containers/mail/roundcube/ca.crt,dst=/var/roundcube/ca.crt,relabel=private
 Volume=/var/containers/mail/roundcube/config:/var/roundcube/config:z
 Memory=1g

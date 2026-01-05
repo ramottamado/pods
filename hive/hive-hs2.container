@@ -16,8 +16,8 @@ Environment=SERVICE_NAME=hiveserver2
 Environment=SERVICE_OPTS="-Xmx1G"
 Secret=versitygw-root-access-key,type=env,target=AWS_ACCESS_KEY_ID
 Secret=versitygw-root-secret-key,type=env,target=AWS_SECRET_ACCESS_KEY
-Mount=type=bind,source=/var/containers/hive/trustStore.jks,target=/trustStore.jks,relabel=shared
-Mount=type=bind,source=/var/containers/hive/hiveKeyStore.jks,target=/hiveKeyStore.jks,relabel=shared
-Mount=type=bind,source=/var/containers/hive/etc/core-site.xml.template,target=/opt/hive/conf/core-site.xml.template,relabel=shared,readonly=true
-Mount=type=bind,source=/var/containers/hive/etc/hiveserver2-site.xml,target=/opt/hive/conf/hiveserver2-site.xml,relabel=shared,readonly=true
+Mount=type=bind,src=/var/containers/hive/trustStore.jks,dst=/trustStore.jks,relabel=shared
+Mount=type=bind,src=/var/containers/hive/hiveKeyStore.jks,dst=/hiveKeyStore.jks,relabel=shared
+Mount=type=bind,src=/var/containers/hive/etc/core-site.xml.template,dst=/opt/hive/conf/core-site.xml.template,relabel=shared,readonly=true
+Mount=type=bind,src=/var/containers/hive/etc/hiveserver2-site.xml,dst=/opt/hive/conf/hiveserver2-site.xml,relabel=shared,readonly=true
 Memory=1152m

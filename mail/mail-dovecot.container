@@ -7,7 +7,7 @@ After=freeipa.container
 Pod=mail.pod
 Image=dovecot.build
 Secret=mail-ldap-auth-pass-config,type=mount,target=/etc/dovecot/conf.d/00-ldap.conf
-Mount=type=bind,source=/var/containers/mail/dovecot/mail.key,target=/etc/dovecot/mail.key,relabel=shared
-Mount=type=bind,source=/var/containers/mail/dovecot/mail.crt,target=/etc/dovecot/mail.crt,relabel=shared
-Mount=type=bind,source=/var/containers/mail/dovecot/dovecot.conf,target=/etc/dovecot/dovecot.conf,relabel=shared
+Mount=type=bind,src=/var/containers/mail/dovecot/mail.key,dst=/etc/dovecot/mail.key,relabel=shared
+Mount=type=bind,src=/var/containers/mail/dovecot/mail.crt,dst=/etc/dovecot/mail.crt,relabel=shared
+Mount=type=bind,src=/var/containers/mail/dovecot/dovecot.conf,dst=/etc/dovecot/dovecot.conf,relabel=shared
 Memory=1g
