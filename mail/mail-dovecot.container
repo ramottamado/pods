@@ -1,7 +1,5 @@
 [Unit]
 Description=Mailserver Dovecot IMAP/POP3 Server
-Requires=freeipa.container
-After=freeipa.container
 
 [Container]
 Pod=mail.pod
