@@ -1,7 +1,7 @@
 [Unit]
 Description=Mailserver Nginx Web Server
-After=mail-roundcube.container
 Requires=mail-roundcube.container
+After=mail-roundcube.container
 
 [Container]
 Pod=mail.pod

@@ -1,7 +1,7 @@
 [Unit]
 Description=Hive Metastore
-After=postgres.container versitygw.container
 Requires=postgres.container versitygw.container
+After=postgres.container versitygw.container
 
 [Service]
 Restart=on-failure

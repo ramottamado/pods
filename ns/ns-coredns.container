@@ -1,7 +1,7 @@
 [Unit]
 Description=Name Server CoreDNS
-After=ns-dnsproxy.container
 Requires=ns-dnsproxy.container
+After=ns-dnsproxy.container
 
 [Service]
 Restart=on-failure
