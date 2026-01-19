@@ -1,12 +1,19 @@
 [Unit]
 Description=Apps HAProxy Reverse Proxy
+Wants=ns.pod
+After=ns.pod
 
 [Service]
 Restart=always
 
 [Container]
-Pod=apps.pod
 Image=docker.io/haproxytech/haproxy-alpine:3.2
 AutoUpdate=registry
+DNS=10.88.0.2
+IP=10.88.0.101
+HostName=apps.saoirse.home.arpa
 Volume=/var/containers/apps/haproxy:/usr/local/etc/haproxy:z
 Memory=1gb
+
+[Install]
+WantedBy=default.target

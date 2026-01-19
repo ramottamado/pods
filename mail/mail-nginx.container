@@ -5,7 +5,7 @@ After=mail-roundcube.container
 
 [Container]
 Pod=mail.pod
-Image=docker.io/library/nginx:1.29-alpine
+Image=docker.io/library/nginx:mainline-alpine
 AutoUpdate=registry
 Mount=type=bind,src=/var/containers/mail/nginx/mail.crt,dst=/etc/mail.crt,relabel=shared
 Mount=type=bind,src=/var/containers/mail/nginx/mail.key,dst=/etc/mail.key,relabel=shared
