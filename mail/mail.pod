@@ -1,7 +1,5 @@
 [Unit]
 Description=Mailserver Pod
-Requires=postgres.container freeipa.container
-After=postgres.container freeipa.container
 
 [Pod]
 ExitPolicy=stop

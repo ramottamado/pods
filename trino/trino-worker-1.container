@@ -14,6 +14,8 @@ AutoUpdate=registry
 DNS=10.88.0.2
 IP=10.88.0.41
 HostName=trino-worker-1.saoirse.home.arpa
+HealthCmd=none
+HealthStartupCmd=none
 Secret=versitygw-root-access-key,type=env,target=S3_ACCESS_KEY
 Secret=versitygw-root-secret-key,type=env,target=S3_SECRET_KEY
 Secret=postgres-password,type=env,target=POSTGRES_PASSWORD

@@ -1,7 +1,5 @@
 [Unit]
 Description=PostgreSQL Server
-Wants=ns.pod
-After=ns.pod
 
 [Container]
 Exec=postgres

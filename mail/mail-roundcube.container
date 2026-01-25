@@ -1,7 +1,7 @@
 [Unit]
 Description=Mailserver Roundcube Webmail Service
-Requires=mail-dovecot.container
-After=mail-dovecot.container
+Requires=mail-dovecot.container postgres.container
+After=mail-dovecot.container postgres.container
 
 [Container]
 Pod=mail.pod
