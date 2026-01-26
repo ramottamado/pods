@@ -1,0 +1,4 @@
+[Unit]
+Description=Spark Cluster Target
+Requires=spark-master.service spark-historyserver.service spark-worker-1.service spark-worker-2.service
+After=spark-master.service spark-historyserver.service spark-worker-1.service spark-worker-2.service

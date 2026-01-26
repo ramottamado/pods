@@ -1,5 +1,6 @@
 [Unit]
 Description=Spark Master
+PartOf=spark-cluster.target
 
 [Container]
 Exec=/entrypoint.sh

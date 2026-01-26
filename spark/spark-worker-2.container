@@ -1,7 +1,8 @@
 [Unit]
 Description=Spark Worker 2
-After=spark-master.container spark-historyserver.container
+PartOf=spark-cluster.target
 Requires=spark-master.container spark-historyserver.container
+After=spark-master.container spark-historyserver.container
 
 [Container]
 Exec=/entrypoint.sh worker spark://spark-master.saoirse.home.arpa:7077
