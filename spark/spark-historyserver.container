@@ -1,8 +1,8 @@
 [Unit]
 Description=Spark History Server
 PartOf=spark-cluster.target
-After=spark-master.container
 Requires=spark-master.container
+After=spark-master.container
 
 [Container]
 Exec=/entrypoint.sh

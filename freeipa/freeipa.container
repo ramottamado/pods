@@ -1,6 +1,6 @@
 [Unit]
 Description=FreeIPA Container
-Wants=ns.pod
+Requires=ns.pod
 After=ns.pod
 
 [Container]

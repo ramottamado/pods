@@ -1,6 +1,6 @@
 [Unit]
 Description=Apps HAProxy Reverse Proxy
-Wants=ns.pod
+Requires=ns.pod
 After=ns.pod
 
 [Service]

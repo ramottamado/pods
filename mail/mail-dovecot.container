@@ -1,6 +1,6 @@
 [Unit]
 Description=Mailserver Dovecot IMAP/POP3 Server
-Wants=freeipa.container
+Requires=freeipa.container
 After=freeipa.container
 
 [Container]
