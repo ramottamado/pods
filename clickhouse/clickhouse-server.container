@@ -7,9 +7,12 @@ Restart=on-failure
 [Container]
 Image=docker.io/library/clickhouse:lts
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.13
-Hostname=clickhouse.saoirse.home.arpa
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.13
+IP6=fd00::13
+HostName=clickhouse.saoirse.home.arpa
+NetworkAlias=clickhouse.saoirse.home.arpa
 Volume=/var/containers/clickhouse/data:/var/lib/clickhouse:z
 Volume=/var/containers/clickhouse/logs:/var/log/clickhouse-server:z
 Volume=/var/containers/clickhouse/configs:/etc/clickhouse-server/config.d:z

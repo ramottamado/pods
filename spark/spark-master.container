@@ -6,9 +6,12 @@ PartOf=spark-cluster.target
 Exec=/entrypoint.sh
 Image=docker.io/library/spark:4.0.0-python3
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.161
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.161
+IP6=fd00::161
 HostName=spark-master.saoirse.home.arpa
+NetworkAlias=spark-master.saoirse.home.arpa
 Environment=SPARK_LOCAL_IP=spark-master.saoirse.home.arpa
 Environment=SPARK_WORKLOAD=master
 Volume=/var/containers/spark/entrypoint.sh:/entrypoint.sh:z

@@ -3,9 +3,12 @@ Description=Mailserver Pod
 
 [Pod]
 ExitPolicy=stop
-DNS=10.88.0.2
-IP=10.88.0.141
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.141
+IP6=fd00::141
 HostName=mail.saoirse.home.arpa
+NetworkAlias=mail.saoirse.home.arpa
 Volume=mail-homedir.volume:/var/home:Z
 Volume=mail-documentroot.volume:/var/www/html:Z
 

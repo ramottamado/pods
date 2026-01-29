@@ -12,9 +12,12 @@ SuccessExitStatus=143
 Exec=ozone datanode
 Image=docker.io/apache/ozone:2.0.0
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.73
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.73
+IP6=fd00::73
 HostName=ozone-dn-3.saoirse.home.arpa
+NetworkAlias=ozone-dn-3.saoirse.home.arpa
 Environment=OZONE-SITE.XML_hdds.datanode.dir="/data/hdds"
 Environment=OZONE-SITE.XML_ozone.metadata.dirs="/data/metadata"
 Environment=OZONE-SITE.XML_ozone.om.address="ozone-om.saoirse.home.arpa"

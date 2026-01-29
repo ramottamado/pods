@@ -9,9 +9,12 @@ Restart=on-abnormal
 [Container]
 Image=docker.io/apache/nifi:2.7.2
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.181
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.181
+IP6=fd00::181
 HostName=nifi.saoirse.home.arpa
+NetworkAlias=nifi.saoirse.home.arpa
 Environment=KEYSTORE_PATH=/opt/certs/keystore.p12
 Environment=KEYSTORE_TYPE=PKCS12
 Environment=TRUSTSTORE_PATH=/opt/certs/truststore.p12
@@ -19,8 +22,6 @@ Environment=TRUSTSTORE_TYPE=PKCS12
 Environment=NIFI_JVM_HEAP_INIT=256M
 Environment=NIFI_JVM_HEAP_MAX=1G
 Environment=NIFI_WEB_HTTPS_PORT=8443
-Environment=NIFI_WEB_PROXY_HOST=nifi.saoirse.home.arpa
-Environment=NIFI_WEB_PROXY_CONTEXT_PATH=/
 Environment=AUTH=ldap
 Environment=INITIAL_ADMIN_IDENTITY='admin'
 Environment=LDAP_AUTHENTICATION_STRATEGY='LDAPS'

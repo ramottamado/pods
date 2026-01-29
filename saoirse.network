@@ -1,0 +1,9 @@
+[Unit]
+Description=Internal Podman network
+
+[Network]
+NetworkName=saoirse
+IPv6=true
+DNS=10.192.0.2
+Subnet=10.192.0.0/24
+Subnet=fd00::/64

@@ -10,9 +10,12 @@ SuccessExitStatus=137
 [Container]
 Image=docker.io/apache/kafka:4.1.0
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.13
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.13
+IP6=fd00::13
 HostName=kafka-3.saoirse.home.arpa
+NetworkAlias=kafka-3.saoirse.home.arpa
 Environment=CLUSTER_ID=2b3b4d65-12b0-458a-9e9d-e5557751be33
 Environment=KAFKA_NODE_ID=3
 Environment=KAFKA_PROCESS_ROLES=broker,controller

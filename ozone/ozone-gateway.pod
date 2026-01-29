@@ -5,6 +5,9 @@ Requires=ozone-om.container
 After=ozone-om.container
 
 [Pod]
-DNS=10.88.0.2
-IP=10.88.0.70
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.70
+IP6=fd00::70
 HostName=ozone-gateway.saoirse.home.arpa
+NetworkAlias=ozone-gateway.saoirse.home.arpa

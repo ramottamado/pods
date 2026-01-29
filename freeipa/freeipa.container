@@ -6,9 +6,12 @@ After=ns.pod
 [Container]
 Image=quay.io/freeipa/freeipa-server:fedora-43
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.10
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.10
+IP6=fd00::10
 HostName=ipa.saoirse.home.arpa
+NetworkAlias=ipa.saoirse.home.arpa
 Secret=ipa-server-install-opts,type=env,target=IPA_SERVER_INSTALL_OPTS
 Secret=freeipa-admin-password,type=env,target=PASSWORD
 Mount=type=bind,src=/var/containers/freeipa/ipa.p12,dst=/data/ipa.p12,relabel=private

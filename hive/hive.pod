@@ -2,9 +2,12 @@
 Description=Hive Pod
 
 [Pod]
-ExitPolicy=stop
-DNS=10.88.0.2
-IP=10.88.0.80
+ExitPolicy=continue
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.80
+IP6=fd00::80
 HostName=hive.saoirse.home.arpa
+NetworkAlias=hive.saoirse.home.arpa
 Volume=/var/containers/hive/jars:/tmp/ext-jars:z
 Volume=/var/containers/hive/secrets:/secrets:Z

@@ -4,9 +4,12 @@ Description=Versity S3 Gateway
 [Container]
 Image=ghcr.io/versity/versitygw:latest
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.60
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.60
+IP6=fd00::60
 HostName=s3.saoirse.home.arpa
+NetworkAlias=s3.saoirse.home.arpa
 EnvironmentFile=/var/containers/versitygw/env.sh
 Environment=VGW_BACKEND=posix
 Environment=VGW_BACKEND_ARG=/data

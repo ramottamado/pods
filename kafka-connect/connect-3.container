@@ -11,9 +11,12 @@ SuccessExitStatus=137
 Exec=/opt/kafka/bin/connect-distributed.sh /connect-distributed.properties
 Image=docker.io/apache/kafka:4.1.0
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.23
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.23
+IP6=fd00::23
 HostName=connect-1.saoirse.home.arpa
+NetworkAlias=connect-1.saoirse.home.arpa
 Environment=KAFKA_HEAP_OPTS="-Xms128M -Xmx256M"
 Environment=KAFKA_LOG4J_OPTS="-Dlog4j2.configurationFile=/log4j2.yaml"
 Volume=/var/containers/kafka-connect/log4j2.yaml:/log4j2.yaml:z

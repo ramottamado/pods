@@ -8,9 +8,12 @@ After=spark-master.container spark-historyserver.container
 Exec=/entrypoint.sh worker spark://spark-master.saoirse.home.arpa:7077
 Image=docker.io/library/spark:4.0.0-python3
 AutoUpdate=registry
-DNS=10.88.0.2
-IP=10.88.0.164
+Network=saoirse.network
+DNS=10.192.0.2
+IP=10.192.0.164
+IP6=fd00::164
 HostName=spark-worker-2.saoirse.home.arpa
+NetworkAlias=spark-worker-2.saoirse.home.arpa
 Environment=SPARK_LOCAL_IP=spark-worker-2.saoirse.home.arpa
 Environment=SPARK_WORKLOAD=worker
 Environment=SPARK_WORKER_CORES=2
