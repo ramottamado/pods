@@ -3,6 +3,9 @@ Description=Internal Podman network
 
 [Network]
 NetworkName=saoirse
+NetworkDeleteOnStop=true
+InterfaceName=saoirse0
+Driver=bridge
 IPv6=true
 DNS=10.192.0.2
 Subnet=10.192.0.0/24
