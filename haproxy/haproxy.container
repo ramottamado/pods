@@ -1,7 +1,7 @@
 [Unit]
 Description=Apps HAProxy Reverse Proxy
-Requires=ns.pod
-After=ns.pod
+Requires=freeipa.container
+After=freeipa.container
 
 [Service]
 Restart=always
@@ -10,7 +10,7 @@ Restart=always
 Image=docker.io/haproxytech/haproxy-alpine:3.2
 AutoUpdate=registry
 Network=saoirse.network
-DNS=10.192.0.2
+DNS=10.192.0.10
 IP=10.192.0.101
 IP6=fd00::101
 HostName=apps.saoirse.home.arpa

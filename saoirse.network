@@ -7,6 +7,6 @@ NetworkDeleteOnStop=true
 InterfaceName=saoirse0
 Driver=bridge
 IPv6=true
-DNS=10.192.0.2
+DNS=10.192.0.10
 Subnet=10.192.0.0/24
 Subnet=fd00::/64
