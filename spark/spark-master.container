@@ -14,8 +14,8 @@ HostName=spark-master.saoirse.home.arpa
 NetworkAlias=spark-master.saoirse.home.arpa
 Environment=SPARK_LOCAL_IP=spark-master.saoirse.home.arpa
 Environment=SPARK_WORKLOAD=master
-Volume=/var/containers/spark/entrypoint.sh:/entrypoint.sh:z
-Volume=/var/containers/spark/conf:/opt/spark/conf:z
-Volume=/var/containers/spark/work-dir:/opt/spark/work-dir:z
-Volume=/var/containers/spark/master/logs:/opt/spark/logs:z
+Mount=type=bind,src=/var/containers/spark/entrypoint.sh,dst=/entrypoint.sh,relabel=shared
+Mount=type=bind,src=/var/containers/spark/conf,dst=/opt/spark/conf,relabel=shared
+Mount=type=bind,src=/var/containers/spark/work-dir,dst=/opt/spark/work-dir,relabel=shared
+Mount=type=bind,src=/var/containers/spark/master/logs,dst=/opt/spark/logs,relabel=shared
 Memory=512m

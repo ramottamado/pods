@@ -10,5 +10,5 @@ Restart=on-failure
 Pod=ns.pod
 Image=docker.io/coredns/coredns:latest
 AutoUpdate=registry
-Volume=/var/containers/ns/coredns/Corefile:/Corefile:z
-Volume=/var/containers/ns/coredns/etc/coredns:/etc/coredns:z
+Mount=type=bind,src=/var/containers/ns/coredns/Corefile,dst=/Corefile,relabel=shared
+Mount=type=bind,src=/var/containers/ns/coredns/etc/coredns,dst=/etc/coredns,relabel=shared

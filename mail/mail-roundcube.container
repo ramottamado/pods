@@ -13,5 +13,5 @@ Environment=ROUNDCUBEMAIL_DB_NAME=roundcube
 Environment=ROUNDCUBEMAIL_DB_USER=roundcube
 Secret=roundcube-db-password,type=env,target=ROUNDCUBEMAIL_DB_PASSWORD
 Mount=type=bind,src=/var/containers/mail/roundcube/ca.crt,dst=/var/roundcube/ca.crt,relabel=private
-Volume=/var/containers/mail/roundcube/config:/var/roundcube/config:z
+Mount=type=bind,src=/var/containers/mail/roundcube/config,dst=/var/roundcube/config,relabel=shared
 Memory=1g

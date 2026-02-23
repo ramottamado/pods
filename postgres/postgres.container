@@ -12,7 +12,7 @@ IP6=fd00::100
 HostName=postgres.saoirse.home.arpa
 NetworkAlias=postgres.saoirse.home.arpa
 Secret=source=postgres-password,type=env,target=POSTGRES_PASSWORD
-Volume=postgres.volume:/var/lib/postgresql:z
+Volume=postgres-data.volume:/var/lib/postgresql:z
 ShmSize=256m
 Memory=1g
 

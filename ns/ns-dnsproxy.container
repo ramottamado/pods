@@ -8,4 +8,4 @@ Restart=on-failure
 Pod=ns.pod
 Image=docker.io/adguard/dnsproxy:latest
 AutoUpdate=registry
-Volume=/var/containers/ns/dnsproxy/config.yaml:/opt/dnsproxy/config.yaml:z
+Mount=type=bind,src=/var/containers/ns/dnsproxy/config.yaml,dst=/opt/dnsproxy/config.yaml,relabel=shared

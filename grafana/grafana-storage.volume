@@ -1,0 +1,7 @@
+[Unit]
+Description=Grafana Data Volume
+
+[Volume]
+Device=/var/containers/grafana/data
+Options=bind
+Copy=true

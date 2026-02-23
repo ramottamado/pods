@@ -11,5 +11,5 @@ IP6=fd00::99
 HostName=mysql.saoirse.home.arpa
 NetworkAlias=mysql.saoirse.home.arpa
 Secret=mysql-password,type=env,target=MYSQL_ROOT_PASSWORD
-Volume=mysql.volume:/var/lib/mysql:z
+Volume=mysql-data.volume:/var/lib/mysql:z
 Memory=1g

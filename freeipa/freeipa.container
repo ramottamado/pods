@@ -24,7 +24,7 @@ Mount=type=bind,src=/var/containers/freeipa/ipa.p12,dst=/data/ipa.p12,relabel=pr
 Mount=type=bind,src=/var/containers/freeipa/ca.crt,dst=/data/ca.crt,relabel=private
 Mount=type=tmpfs,dst=/run
 Mount=type=tmpfs,dst=/tmp
-Volume=/var/containers/freeipa/data:/data:Z
+Volume=freeipa-data.volume:/data:Z
 ReadOnly=true
 
 [Install]

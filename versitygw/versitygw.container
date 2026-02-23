@@ -20,4 +20,7 @@ Secret=versitygw-root-access-key,type=env,target=ROOT_ACCESS_KEY
 Secret=versitygw-root-secret-key,type=env,target=ROOT_SECRET_KEY
 Mount=type=bind,src=/var/containers/versitygw/s3.crt,dst=/s3.crt,relabel=private
 Mount=type=bind,src=/var/containers/versitygw/s3.key,dst=/s3.key,relabel=private
-Volume=/var/containers/versitygw/data:/data:z
+Mount=type=bind,src=/var/containers/versitygw/data,dst=/data,relabel=shared
+
+[Install]
+WantedBy=default.target

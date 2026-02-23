@@ -1,0 +1,7 @@
+[Unit]
+Description=FreeIPA Data Volume
+
+[Volume]
+Device=/var/containers/freeipa/data
+Options=bind
+Copy=true
