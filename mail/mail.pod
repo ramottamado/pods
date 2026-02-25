@@ -1,5 +1,14 @@
 [Unit]
 Description=Mailserver Pod
+Requires=postgres.container freeipa.container
+After=postgres.container freeipa.container
+
+[Service]
+Restart=always
+RestartSec=5s
+RestartMode=direct
+ExecStartPre=nslookup ipa.saoirse.home.arpa 10.192.0.10
+TimeoutStartSec=30s
 
 [Pod]
 ExitPolicy=stop
@@ -13,4 +22,4 @@ Volume=mail-homedir.volume:/var/home:Z
 Volume=mail-documentroot.volume:/var/www/html:Z
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target

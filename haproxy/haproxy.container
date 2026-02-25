@@ -5,6 +5,10 @@ After=freeipa.container
 
 [Service]
 Restart=always
+RestartSec=5s
+RestartMode=direct
+ExecStartPre=nslookup ipa.saoirse.home.arpa 10.192.0.10
+TimeoutStartSec=30s
 
 [Container]
 Image=docker.io/haproxytech/haproxy-alpine:3.2
@@ -19,4 +23,4 @@ Mount=type=bind,src=/var/containers/haproxy,dst=/usr/local/etc/haproxy,relabel=s
 Memory=1gb
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target

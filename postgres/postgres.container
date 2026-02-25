@@ -17,4 +17,4 @@ ShmSize=256m
 Memory=1g
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
