@@ -7,7 +7,7 @@ After=postgres.container freeipa.container
 Restart=always
 RestartSec=5s
 RestartMode=direct
-ExecStartPre=nslookup ipa.saoirse.home.arpa 10.192.0.10
+ExecStartPre=nslookup -class=in -type=soa saoirse.home.arpa 10.192.0.10
 TimeoutStartSec=30s
 
 [Pod]

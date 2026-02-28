@@ -1,6 +1,9 @@
 [Unit]
 Description=Dovecot Image Build
 
+[Service]
+ExecStartPost=/bin/podman image prune -f
+
 [Build]
 ImageTag=tamado.codes/library/dovecot:latest
 File=/var/containers/mail/dovecot/Containerfile
