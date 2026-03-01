@@ -22,4 +22,4 @@ Volume=mail-homedir.volume:/var/home:Z
 Volume=mail-documentroot.volume:/var/www/html:Z
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
