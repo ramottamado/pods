@@ -22,4 +22,4 @@ Volume=freeipa-data.volume:/data:Z
 ReadOnly=true
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

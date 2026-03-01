@@ -14,4 +14,4 @@ HostName=ns.saoirse.home.arpa
 NetworkAlias=ns.saoirse.home.arpa
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
